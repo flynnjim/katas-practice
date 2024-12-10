@@ -21,4 +21,14 @@ describe("takes array of words and returns array of palindromes", () => {
     const output = [];
     expect(getPalindromes(input)).toEqual(output);
   });
+  test("checks function returns new object with new ref in memory", () => {
+    const refInput = ["pineapple", "pony", "racecar"]
+    const returnValue = getPalindromes(refInput)
+    expect(refInput).not.toBe(returnValue)
+  })
+  test("check function does not mutate the original array", () => {
+    const mutInput = ["pineapple", "pony", "racecar"]
+    getPalindromes(mutInput)
+    expect(mutInput).toEqual(["pineapple", "pony", "racecar"])
+  })
 });
