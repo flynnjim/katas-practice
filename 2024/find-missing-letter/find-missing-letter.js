@@ -15,8 +15,6 @@ function findMissingLetter(letters) {
       const nextLetter = letters[index + 1].charCodeAt();
 
       if (!(thisLetterCode + 1 === nextLetter)) {
-        console.log(letter);
-
         returnString = String.fromCharCode(thisLetterCode + 1);
       }
     }
