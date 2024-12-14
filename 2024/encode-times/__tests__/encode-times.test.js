@@ -19,4 +19,10 @@ describe("encodes time as discrete dots or hash symbols to represent sleep and w
       ".............................................##########.....";
     expect(encodeTimes(input)).toBe(output);
   });
+  test("check original array is not mutated", () => {
+    const mutInput = [0, 45, 55];
+    const expectedArray = [0, 45, 55]
+    encodeTimes(mutInput)
+    expect(mutInput).toEqual(expectedArray)
+  });
 });
