@@ -32,14 +32,14 @@ describe("takes string of instruction, array of names and boolean and returns ar
     const instructionString = "Go to the bank %";
     const nameArray = ["Katherine", "Tim"];
     const polite = true;
-    const returnValue = politeRequests(instructionString, nameArray, polite)
-    expect(returnValue).not.toBe(nameArray)
-  })
+    const returnValue = politeRequests(instructionString, nameArray, polite);
+    expect(returnValue).not.toBe(nameArray);
+  });
   test("does not mutate original array", () => {
     const instructionString = "Go to the bank %";
     const nameArray = ["Katherine", "Tim"];
     const polite = true;
-    politeRequests(instructionString, nameArray, polite)
-    expect(nameArray).toEqual(["Katherine", "Tim"])
-  })
+    politeRequests(instructionString, nameArray, polite);
+    expect(nameArray).toEqual(["Katherine", "Tim"]);
+  });
 });
