@@ -48,11 +48,7 @@ const splitTheData = (data) => {
   if (data.length === 0) {
     return {};
   }
-//   const returnObject = {};
 
-//   returnObject["people"] = [];
-//   returnObject["games"] = {};
-//   returnObject["gamesPeopleLike"] = [];
   const returnObject = {
     'people': [],
     'games': {},
