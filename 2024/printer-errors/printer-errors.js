@@ -18,10 +18,10 @@ printer_error(s) => "8/22"
 
 */
 
-
 function printerError(s) {
-    return `${s.length - s.split("").filter((char) => char.charCodeAt() < 110).length}/${s.length}`
-
+  return `${s.split("").filter((char) => char.charCodeAt() > 109).length}/${
+    s.length
+  }`;
 }
 
-module.exports = printerError
+module.exports = printerError;
